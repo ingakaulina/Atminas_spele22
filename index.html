@@ -45,48 +45,62 @@
         <div class="content">
             <h3 class="virsraksts">Noteikumu teksts</h3>
 
-            Vārds: <input id="vards"/>
+            Vārds: <input id="vards" />
+            <br />
             Vecums: <input id="vecums" />
-            Reģions: 
+            <br />
+            Reģions:
             <select id="regions">
-               
-                <option value="Vidzeme"> Vidzeme</option>
-                <option value="Latgale"> Latgale</option> 
-                <option value="Kurzeme"> Kurzeme</option>
+                <option value="Vidzeme">Vidzeme</option>
+                <option value="Latgale">Latgale</option>
+                <option value="Kurzeme">Kurzeme</option>
+            </select>
 
-            </select> 
-            <button onclick="saktSpeli()"> Sākt </button>
+            <button onclick="saktSpeli()">Sākt</button>
+            
         </div>
 
     </div><!--beidzas wrapper-->
 
-<script> 
+<script>
+
     function saktSpeli() 
     {
-        let vards = document.querySelector('#vards').value
-        let vecums = document.querySelector('#vecums').value
+        let vards   = document.querySelector('#vards').value
+        let vecums  = document.querySelector('#vecums').value
         let regions = document.querySelector('#regions').value
+        
+        console.log(vards)
 
-        console.log.(vards)
-        if (vards=='') 
-        alert('Ievadi vārdu!')
-    }//beidzas saktSpeli
-    /*let vards
+        if( vards=='' )
+        {
+            alert('Ievadi vārdu!')
+        }
+        else
+        {
+            window.location='spele.html#'+vards+','+vecums+','+regions
+        }
+
+    }//beidzas saktSpeli()
+
+
+
+
+
+    /*
+    let vards
     const valsts = "Latvija"
     vards = "Laura"
     let vards2 = `Pēteris ir
     labais!!!`
     let klase = ['Jānis','Laura','Jana']
     klase[3] = 'Uģis'
-
     let skolens = {
        vards:'Jānis',
        vecums:16,
        'patīk datori':'jā' 
     }
     skolens['vards']
-
-
     let json = [
         {
          vards:'Jānis',
@@ -97,12 +111,9 @@
          vecums:17   
         }
     ]
-
-
     console.log('beigas ir')
-
-    document.querySelector('.virsraksts').innerHTML = 'abc'
-
+    document.querySelector('.virsraksts').innerHTML = 'Vārds:'+vards
+    */
 </script>
     
 </body>
